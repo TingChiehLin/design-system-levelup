@@ -1,0 +1,40 @@
+.textField_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 24rem;
+}
+
+.textField_input {
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1rem;
+  font-size: 14px;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+}
+
+.textField_input:focus {
+  outline-color: skyblue;
+}
+
+.textField_error {
+  outline: 1px solid;
+  outline-color: palevioletred;
+}
+
+.textField_error:focus {
+  outline-width: 2px;
+  outline-color: palevioletred;
+}
+
+/*
+  elemnt class selector
+*/
+
+/* input.textField_input:active {
+  outline-color: green;
+} */
