@@ -14,6 +14,7 @@ export interface TextFieldTypeProps {
   placeHolder: string;
   disabled: boolean;
   readOnly: boolean;
+  icon: React.ReactNode;
   onChange: (e: FormEvent<HTMLInputElement>) => void;
 }
 
@@ -25,6 +26,7 @@ const TextField: FC<TextFieldTypeProps> = ({
   placeHolder,
   disabled,
   readOnly,
+  icon,
   onChange,
 }) => {
   return (
@@ -37,6 +39,7 @@ const TextField: FC<TextFieldTypeProps> = ({
       >
         {labelText}
       </label>
+      {icon}
       <input
         className={`${styles.textField_input} ${
           variant === "error" && styles.textField_error
@@ -53,14 +56,3 @@ const TextField: FC<TextFieldTypeProps> = ({
 };
 
 export default TextField;
-
-/*
-- default
-- hover, focus
-- disabled
-
-- readOnly.
-
-- With label
-- Without label
-*/
