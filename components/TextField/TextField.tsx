@@ -51,6 +51,9 @@ const TextField: FC<TextFieldTypeProps> = ({
         disabled={disabled}
         onChange={onChange}
       />
+      {variant === "error" && (
+        <span className={styles.textField_errorMessage}>Your input format is incorrect</span>
+      )}
     </div>
   );
 };
