@@ -5,6 +5,7 @@ import styles from "./checkbox.module.css";
 interface CheckBoxTypeProps {
   id: string;
   isChecked: boolean;
+  isDisable?: boolean;
   onChange: (e: FormEvent<HTMLInputElement>) => void;
   labelText: string;
 }
@@ -12,6 +13,7 @@ interface CheckBoxTypeProps {
 const CheckBox: FC<CheckBoxTypeProps> = ({
   id,
   isChecked,
+  isDisable,
   onChange,
   labelText,
 }) => {
@@ -23,8 +25,11 @@ const CheckBox: FC<CheckBoxTypeProps> = ({
           id={id}
           checked={isChecked}
           onChange={onChange}
+          className={styles.checkbox_checkbox}
         />
-        <label htmlFor={id}>{labelText}</label>
+        <label className={styles.checkbox_label} htmlFor={id}>
+          {labelText}
+        </label>
       </div>
     </>
   );

@@ -1,0 +1,23 @@
+.checkbox_container {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox_container.disable {
+  cursor: not-allowed;
+}
+
+.checkbox_checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  accent-color: rgb(255, 182, 57);
+}
+
+.checkbox_checkbox {
+}
+
+.checkbox_label {
+}
