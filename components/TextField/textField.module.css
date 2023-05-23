@@ -1,4 +1,4 @@
-.textField_container {
+.container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   max-width: 24rem;
 }
 
-.textField_input {
+.input {
   width: 100%;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
@@ -17,21 +17,21 @@
   border-radius: 10px;
 }
 
-.textField_input:focus {
+.input:focus {
   outline-color: skyblue;
 }
 
-.textField_error {
+.input_error {
   outline: 1px solid;
   outline-color: palevioletred;
 }
 
-.textField_error:focus {
+.input_error:focus {
   outline-width: 2px;
   outline-color: palevioletred;
 }
 
-.textField_errorMessage {
+.errorMsg {
   color: palevioletred;
 }
 

@@ -23,10 +23,11 @@ export default function Home() {
     <main className={styles.main}>
       <TextField
         id={"book-search-input"}
-        labelText={"Book Store"}
+        label={"Book Store"}
         variant={"error"}
         value={searchInputText}
         placeHolder={"Please Input Search Text"}
+        error={"Your input format is incorrect"}
         disabled={false}
         readOnly={false}
         icon={<FiSearch className="textField_icon" />}

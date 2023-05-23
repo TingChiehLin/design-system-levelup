@@ -8,10 +8,11 @@ type VariantType = "standard" | "filled" | "alert" | "error";
 
 export interface TextFieldTypeProps {
   id: string;
-  labelText: string;
+  label: string;
   variant: VariantType;
   value: string;
   placeHolder: string;
+  error: string;
   disabled: boolean;
   readOnly: boolean;
   icon: React.ReactNode;
@@ -20,29 +21,30 @@ export interface TextFieldTypeProps {
 
 const TextField: FC<TextFieldTypeProps> = ({
   id,
-  labelText,
+  label,
   variant,
   value,
   placeHolder,
+  error,
   disabled,
   readOnly,
   icon,
   onChange,
 }) => {
   return (
-    <div className={styles.textField_container}>
+    <div className={styles.container}>
       <label
         className={`${styles.textField_label} ${
           variant === "error" && styles.textFieldLebel_error
         }`}
         htmlFor={id}
       >
-        {labelText}
+        {label}
       </label>
       {icon}
       <input
-        className={`${styles.textField_input} ${
-          variant === "error" && styles.textField_error
+        className={`${styles.input} ${
+          variant === "error" && styles.input_error
         }`}
         type="text"
         id={id}
@@ -51,9 +53,7 @@ const TextField: FC<TextFieldTypeProps> = ({
         disabled={disabled}
         onChange={onChange}
       />
-      {variant === "error" && (
-        <span className={styles.textField_errorMessage}>Your input format is incorrect</span>
-      )}
+      {variant === "error" && <span className={styles.errorMsg}>{error}</span>}
     </div>
   );
 };
