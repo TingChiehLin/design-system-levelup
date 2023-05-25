@@ -7,7 +7,7 @@ interface MultiCheckBoxPropType {}
 const MultiCheckBox: FC<MultiCheckBoxPropType> = ({}) => {
   return (
     <>
-      <div className={styles.multiCheckBox_contianer}>MultiCheckBox</div>
+      <div className={styles.contianer}>MultiCheckBox</div>
     </>
   );
 };

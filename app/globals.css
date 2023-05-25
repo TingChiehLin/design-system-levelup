@@ -1,3 +1,7 @@
+:root {
+  --form-control-disabled: #959495;
+}
+
 body {
   margin: 0;
   padding: 0;

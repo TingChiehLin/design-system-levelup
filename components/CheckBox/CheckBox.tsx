@@ -19,15 +19,15 @@ const CheckBox: FC<CheckBoxTypeProps> = ({
 }) => {
   return (
     <>
-      <div className={styles.checkbox_container}>
+      <div className={styles.container}>
         <input
           type="checkbox"
           id={id}
           checked={isChecked}
           onChange={onChange}
-          className={styles.checkbox_checkbox}
+          className={styles.checkbox}
         />
-        <label className={styles.checkbox_label} htmlFor={id}>
+        <label className={styles.label} htmlFor={id}>
           {labelText}
         </label>
       </div>

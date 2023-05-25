@@ -26,7 +26,7 @@ export default function Home() {
       <TextField
         id={"book-search-input"}
         labelText={"Book Store"}
-        variant={"error"}
+        variant={"standard"}
         value={searchInputText}
         placeHolder={"Please Input Search Text"}
         disabled={false}

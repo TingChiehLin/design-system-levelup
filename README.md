@@ -55,7 +55,8 @@ To learn more from this project, take a look at the following resources:
 - [Design Documentation](https://m2.material.io/components/text-fields#anatomy) - To get idea inspiration
 - [Accessible Form Validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/) - Accessible Form Validation
 - [HTML Inputs and Labels](https://css-tricks.com/html-inputs-and-labels-a-love-story/) - HTML Inputs and Labels: A Love Story
-- [readonly](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly) - To understnad ``readonly`` property for HTML5
+- [readonly](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly) - To understnad `readonly` property for HTML5
+- [Custom Checkbox Pure CSS](https://www.youtube.com/watch?v=NfW_5Y1RZQ4) - To understand custom checkbox with CSS
 
 ## Deploy on Vercel
 
