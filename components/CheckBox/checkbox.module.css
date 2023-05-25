@@ -17,7 +17,7 @@ input[type="checkbox"].checkbox {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
-  /* opacity: 0; */
+  opacity: 0;
   width: 16px;
   height: 16px;
   border-radius: 10px;
@@ -27,26 +27,36 @@ input[type="checkbox"].checkbox {
   Custom checkbox shape
 */
 
-input[type="checkbox"].checkbox::before {
+input[type="checkbox"].checkbox + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
   display: inline-block;
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-color: red;
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em skyblue;
-}
-/* checked -> state */
-input[type="checkbox"].checkbox:checked::before {
-  background-color: green;
-}
-/* element -> class -> pseudo selector */
-input[type="checkbox"].checkbox:focus {
-  outline-offset: max(2px, 0.15em);
+  color: #666;
 }
 
-input[type="checkbox"].checkbox:disabled {
-  --form-control-color: #959495;
-  color: var(--form-control-disabled);
-  cursor: not-allowed;
+input[type="checkbox"].checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid rgb(16, 128, 128);
+  background: #fff;
+}
+
+[type="checkbox"].checkbox + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  transition: all 0.2s ease-in-out;
+}
+
+[type="checkbox"].checkbox:checked + label::after {
+  background-color: darkcyan;
 }
