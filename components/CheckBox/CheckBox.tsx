@@ -6,16 +6,16 @@ interface CheckBoxTypeProps {
   id: string;
   isChecked: boolean;
   isDisable?: boolean;
-  onChange: (e: FormEvent<HTMLInputElement>) => void;
   labelText: string;
+  onChange: (e: FormEvent<HTMLInputElement>) => void;
 }
 
 const CheckBox: FC<CheckBoxTypeProps> = ({
   id,
   isChecked,
   isDisable,
-  onChange,
   labelText,
+  ...props
 }) => {
   return (
     <>
@@ -24,7 +24,8 @@ const CheckBox: FC<CheckBoxTypeProps> = ({
           type="checkbox"
           id={id}
           checked={isChecked}
-          onChange={onChange}
+          disabled={isDisable}
+          {...props}
           className={styles.checkbox}
         />
         <label className={styles.label} htmlFor={id}>

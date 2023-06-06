@@ -4,7 +4,7 @@ import React, { FC, FormEvent } from "react";
 
 import styles from "./textField.module.css";
 
-type VariantType = "standard" | "filled" | "alert" | "error";
+type VariantType = "standard" | "alert" | "error";
 
 export interface TextFieldTypeProps {
   id: string;
@@ -25,7 +25,7 @@ const TextField: FC<TextFieldTypeProps> = ({
   placeHolder,
   disabled,
   readOnly,
-  onChange,
+  ...props
 }) => {
   return (
     <div className={styles.textField_container}>
@@ -46,7 +46,7 @@ const TextField: FC<TextFieldTypeProps> = ({
         value={value}
         placeholder={placeHolder}
         disabled={disabled}
-        onChange={onChange}
+        {...props}
       />
     </div>
   );
