@@ -1,6 +1,6 @@
 # Design System Levelup
 
-Design, accessibility, docs toward “Design System Engineer” ✨
+Design, accessibility, usability,docs toward “Building Friendly Design System” ✨
 
 ## Table of contents
 
@@ -53,9 +53,10 @@ Some of challenges, I am facing and trying to overcome:
 To learn more from this project, take a look at the following resources:
 
 - [Design Documentation](https://m2.material.io/components/text-fields#anatomy) - To get idea inspiration
+- [Material Design](https://m2.material.io/components/checkboxes#specs) - Checkbox behaviour
 - [Accessible Form Validation](https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/) - Accessible Form Validation
 - [HTML Inputs and Labels](https://css-tricks.com/html-inputs-and-labels-a-love-story/) - HTML Inputs and Labels: A Love Story
-- [readonly](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly) - To understnad ``readonly`` property for HTML5
+- [readonly](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly) - To understnad `readonly` property for HTML5
 
 ## Deploy on Vercel
 
