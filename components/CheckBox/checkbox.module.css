@@ -1,0 +1,62 @@
+.container {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.container.disable {
+  cursor: not-allowed;
+}
+
+/*
+  Reset Checkbox
+*/
+
+input[type="checkbox"].checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  opacity: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+}
+
+/*
+  Custom checkbox shape
+*/
+
+input[type="checkbox"].checkbox + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  color: #666;
+}
+
+input[type="checkbox"].checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  outline: 2px solid rgb(16, 128, 128);
+  background: #fff;
+}
+
+[type="checkbox"].checkbox + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  transition: all 0.2s ease-in-out;
+}
+
+[type="checkbox"].checkbox:checked + label::after {
+  background-color: darkcyan;
+}

@@ -9,14 +9,19 @@ import styles from "./page.module.css";
 import { FiSearch } from "react-icons/fi";
 
 import TextField from "@/components/TextField/TextField";
-import CheckBox from "@/components/CheckBox/CheckBox";
+import CheckBox from "@/components/CheckBox";
 
 export default function Home() {
   const [searchInputText, setSearchInputText] = useState<string>("");
+  const [optIn, setOptIn] = useState<boolean>(false);
 
   const handleOnChangeInput = (e: FormEvent<HTMLInputElement>) => {
     setSearchInputText(e.currentTarget.value);
     console.log("searchInputText:", e.currentTarget.value);
+  };
+
+  const handleOnChangeCheckbox = (e: FormEvent<HTMLInputElement>) => {
+    setOptIn(e.currentTarget.checked);
   };
 
   return (
@@ -33,7 +38,12 @@ export default function Home() {
         icon={<FiSearch className="textField_icon" />}
         onChange={handleOnChangeInput}
       />
-      <CheckBox />
+      <CheckBox
+        id={"opt-in-checkbox"}
+        isChecked={optIn}
+        onChange={handleOnChangeCheckbox}
+        labelText={"The USA"}
+      />
     </main>
   );
 }
